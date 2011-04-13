@@ -17,7 +17,7 @@ module Cucumber
       end
 
       def after_feature_element(scenario)
-        $stdout.puts " #{scenario.name} (#{@duration}s)"
+        @io.puts " #{scenario.name} (#{@duration}s)"
         @duration = 0.0
       end
     end
