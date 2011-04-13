@@ -1,0 +1,18 @@
+= Timed Progress Formatter
+
+In order to get a quick overview over the scenarios and running times
+As a developer and CI-user
+I want to have a timed cucumber formatter
+
+== Installation/Usage
+
+If you're using Rails, simply drop it in your features/support directory.
+
+Then, you can say:
+
+cucumber features/* -f Cucumber::Formatter::Timed
+
+Not using Rails? You just need to ensure that the file is somewhere it can be
+included, and call it like:
+
+cucumber features/* --require path/to/timed.rb -f Cucumber::Formatter::Timed
