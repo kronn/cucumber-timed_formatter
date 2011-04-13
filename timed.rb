@@ -3,7 +3,8 @@ require 'cucumber/formatter/progress'
 module Cucumber
   module Formatter
     class Timed < Progress
-      def initialize(*args)
+      def initialize(step_mother, io, options)
+        @io = io
         @duration = 0.0
         super
       end
