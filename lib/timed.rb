@@ -9,6 +9,10 @@ module Cucumber
         super
       end
 
+      def before_feature(feature)
+        @io.puts "#{feature.name.lines.first.chomp} [#{feature.file}]"
+      end
+
       def before_steps(steps)
         @my_time = Time.now
       end
