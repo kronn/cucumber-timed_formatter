@@ -21,7 +21,7 @@ spec = Gem::Specification.new do |s|
   s.rdoc_options = ['--charset=utf-8', '--fmt=shtml', '--all']
   # s.extra_rdoc_files = []
 
-  s.add_dependency 'cucumber', '~> 0.4'
+  s.add_dependency 'cucumber', '>= 0.4'
 
   # for release and doc generation, more less optional
   # s.add_development_dependency 'rake'
