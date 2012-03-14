@@ -24,7 +24,15 @@ module Cucumber
       def after_step_result(keyword, step_match, multiline_arg, status, exception, source_indent, background)
         super
         if status == :failed
-          @io.puts step_match.backtrace_line
+          error_msg = "#{exception.message} (#{exception.class.name})\n#{exception.backtrace.join("\n")}"
+
+          @io.puts <<-EOMESSAGE
+
+#{format_string(step_match.backtrace_line, :comment)}
+
+#{format_string(error_msg, status)}
+
+          EOMESSAGE
         end
       end
 
