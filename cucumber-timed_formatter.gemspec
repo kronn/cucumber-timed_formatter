@@ -1,10 +1,10 @@
 # vim:ft=ruby:fileencoding=utf-8
 
-# require File.expand_path('../lib/cucumber/formatter/timed/version.rb', __FILE__)
+require File.expand_path('../lib/cucumber-timed_formatter/version.rb', __FILE__)
 
 spec = Gem::Specification.new do |s|
   s.name = "cucumber-timed_formatter"
-  s.version = "0.0.1"
+  s.version = Cucumber::Formatter::Timed::VERSION
   s.date = File.mtime(__FILE__)
   s.summary = ""
   s.description = ""
