@@ -6,8 +6,8 @@ spec = Gem::Specification.new do |s|
   s.name = "cucumber-timed_formatter"
   s.version = Cucumber::Formatter::Timed::VERSION
   s.date = File.mtime(__FILE__)
-  s.summary = ""
-  s.description = ""
+  s.summary = "A progress-formatter with a little more info"
+  s.description = "A progress-formatter with a little more info: Each Scenario is one line and the time is measured."
 
   s.authors = ["Matthias Viehweger"]
   s.email = 'kronn@kronn.de'
