@@ -1,5 +1,14 @@
 require 'cucumber/formatter/progress'
 
+# Extend Cucumber's builtin formats, so that this
+# formatter can be used with --format timed
+require 'cucumber/cli/options'
+
+Cucumber::Cli::Options::BUILTIN_FORMATS['timed'] = [
+  "Cucumber::Formatter::Timed",
+  "A progress-formatter with a little more info, instafailing and line-wise output"
+]
+
 module Cucumber
   module Formatter
     class Timed < Progress
