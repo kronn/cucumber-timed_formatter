@@ -6,8 +6,10 @@ spec = Gem::Specification.new do |s|
   s.name = "cucumber-timed_formatter"
   s.version = Cucumber::Formatter::Timed::VERSION
   s.date = File.mtime(__FILE__)
-  s.summary = "A progress-formatter with a little more info"
-  s.description = "A progress-formatter with a little more info: Each Scenario is one line and the time is measured."
+  s.summary = "A progress-formatter with a little more info, instafailing."
+  s.description = "A progress-formatter with a little more info: Each Scenario is one line and the time is measured. Additionally, errors are shown immediately to be a little like instafail.
+
+  The Formatter is ideal for Jenkins line-by-line output."
 
   s.authors = ["Matthias Viehweger"]
   s.email = 'kronn@kronn.de'
