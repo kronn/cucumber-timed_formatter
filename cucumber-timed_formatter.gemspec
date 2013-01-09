@@ -20,7 +20,8 @@ spec = Gem::Specification.new do |s|
   s.files = `git ls-files`.split("\n") - ['.gitignore']
   # s.test_files = `git ls-files test`.split("\n")
 
-  s.rdoc_options = ['--charset=utf-8', '--fmt=shtml', '--all']
+  # s.rdoc_options = ['--charset=utf-8', '--fmt=shtml', '--all']
+  s.rdoc_options = ['--charset=utf-8', '--all']
   # s.extra_rdoc_files = []
 
   s.add_dependency 'cucumber', '~> 1.2'
