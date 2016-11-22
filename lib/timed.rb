@@ -5,7 +5,7 @@ require 'cucumber/formatter/progress'
 require 'cucumber/cli/options'
 
 Cucumber::Cli::Options::BUILTIN_FORMATS['timed'] = [
-  "Cucumber::Formatter::Timed",
+  "Cucumber::Formatter::Timed",
   "A progress-formatter with a little more info, instafailing and line-wise output"
 ]
 
@@ -30,16 +30,17 @@ module Cucumber
         @duration += Time.now - @my_time
       end
 
-      def after_step_result(keyword, step_match, multiline_arg, status, exception, source_indent, background, *args)
-        super
-        if status == :failed
-          error_msg = "#{exception.message} (#{exception.class.name})\n#{exception.backtrace.join("\n")}"
+      def after_test_step(test_step, result)
+        super(test_step, result)
+
+        unless result.ok?
+          error_msg = "#{result.exception.message} (#{result.exception.class.name})\n#{result.exception.backtrace.join("\n")}"
 
           @io.puts <<-EOMESSAGE
 
-#{format_string(step_match.backtrace_line, :comment)}
+#{format_string(test_step.action_location, :comment)}
 
-#{format_string(error_msg, status)}
+#{format_string(error_msg, result.to_sym)}
 
           EOMESSAGE
         end
