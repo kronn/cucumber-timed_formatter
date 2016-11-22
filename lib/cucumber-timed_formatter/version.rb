@@ -1,7 +1,5 @@
 module Cucumber
-  module Formatter
-    class Timed
-      VERSION = '0.2.0'
-    end
+  module TimedFormatter
+    VERSION = '0.2.0'
   end
 end
