@@ -14,7 +14,6 @@ spec = Gem::Specification.new do |s|
   s.authors = ["Matthias Viehweger"]
   s.email = 'kronn@kronn.de'
   s.homepage = 'http://github.com/kronn/cucumber-timed_formatter'
-  s.rubyforge_project = '[none]' # to supress the warning
 
   s.require_paths = ["lib"]
   s.files = `git ls-files`.split("\n") - ['.gitignore']
@@ -24,7 +23,7 @@ spec = Gem::Specification.new do |s|
   s.rdoc_options = ['--charset=utf-8', '--all']
   # s.extra_rdoc_files = []
 
-  s.add_dependency 'cucumber', '~> 1.2'
+  s.add_dependency 'cucumber', '~> 2.0'
 
   # for release and doc generation, more less optional
   # s.add_development_dependency 'rake'
