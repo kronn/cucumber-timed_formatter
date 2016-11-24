@@ -16,3 +16,10 @@ Not using Rails? You just need to ensure that the file is somewhere it can be
 included, and call it like:
 
 cucumber features/* --require path/to/timed.rb -f Cucumber::Formatter::Timed
+
+== Version Note
+
+The current version 1.0 should be working with cucumber 2.x. If not, please
+open an issue or pull request.
+
+cucumber 1.x was supported in version 0.2 of this gem.
