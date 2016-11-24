@@ -31,7 +31,7 @@ module Cucumber
       end
 
       def after_test_step(test_step, result)
-        super(test_step, result)
+        super
 
         unless result.ok?
           error_msg = "#{result.exception.message} (#{result.exception.class.name})\n#{result.exception.backtrace.join("\n")}"
