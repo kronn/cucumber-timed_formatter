@@ -1,5 +1,3 @@
-source :rubygems
-
 gemspec
 
 group :development do
