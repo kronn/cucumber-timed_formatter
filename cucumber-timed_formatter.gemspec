@@ -14,6 +14,7 @@ spec = Gem::Specification.new do |s|
   s.authors = ["Matthias Viehweger"]
   s.email = 'kronn@kronn.de'
   s.homepage = 'http://github.com/kronn/cucumber-timed_formatter'
+  s.license = 'MIT'
 
   s.require_paths = ["lib"]
   s.files = `git ls-files`.split("\n") - ['.gitignore']
